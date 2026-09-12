@@ -8,6 +8,7 @@
 export const LANGUAGES = [
 	{ code: 'ar-SA', name: 'العربية', dir: 'rtl' },
 	{ code: 'de-DE', name: 'Deutsch', dir: 'ltr' },
+	{ code: 'emoji', name: '🤓', dir: 'ltr' },
 	{ code: 'en-UK', name: 'English (UK)', dir: 'ltr' },
 	{ code: 'es-ES', name: 'Español', dir: 'ltr' },
 	{ code: 'fr-FR', name: 'Français', dir: 'ltr' },
@@ -35,6 +36,7 @@ const LOCALES_BASE = new URL('../locales/', import.meta.url)
 /** 供 `Intl.DateTimeFormat` 使用的 BCP-47 映射（fount 代码不全是标准 BCP-47）。 */
 const INTL_LOCALES = {
 	'en-UK': 'en-GB',
+	emoji: 'en-GB',
 	lzh: 'zh-Hans',
 }
 

@@ -1,0 +1,15 @@
+{
+	"title": "🤖🏆🔢",
+	"subtitle": "🌐 {providers} 🏢 · 🤖 {models} · 🔢⬇️",
+	"yAxis": "🔢",
+	"xAxis": "🤖",
+	"note": "⚠️ 🔢 ≠ ⭐",
+	"loading": "⏳🤖",
+	"error": "❌ {message}",
+	"retry": "🔄",
+	"updated": "🕒 {time}",
+	"source": "📦 models.dev",
+	"producedBy": "🏭 fount agent 🤓",
+	"github": "🐙",
+	"blog": "📰"
+}

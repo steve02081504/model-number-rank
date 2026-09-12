@@ -27,7 +27,8 @@
 - `index.html`：daisyUI/Tailwind 骨架 + CDN 引用，几乎没有自定义 CSS。
 - `src/rank.mjs`：纯计算（版本号解析、排名、统计、图标 URL），无 DOM，**改排名逻辑只改这里**。
 - `src/i18n.mjs`：语言元数据（代码/母语名/方向）+ 纯函数 + `loadMessages(code)`（按 URL 拉 `locales/<code>.json`）。
-- `locales/<code>.json`：18 种 fount 语言的文案；键集合需与 fount `src/public/locales/list.csv` 的语言一致。
+- `locales/<code>.json`：fount `src/public/locales/list.csv` 全部 19 条（18 语言 + `emoji`
+  伪语言）的文案；键集合需与之一致。
 - `src/app.mjs`：取数、ECharts option、语言/主题切换、定时刷新。`?lang=<code>`、`?theme=light|dark` 便于分享与截图。
 
 ## 约定

@@ -48,8 +48,8 @@ Deno.test('每个 fount 语言文件都有完整文案', async () => {
 	}
 })
 
-Deno.test('语言数量与 fount list.csv 一致', () => {
-	strictEqual(LANGUAGES.length, 18)
+Deno.test('语言数量与 fount list.csv 一致（含 emoji 伪语言）', () => {
+	strictEqual(LANGUAGES.length, 19)
 })
 
 Deno.test('translator 缺键时回退到 fallback', () => {
