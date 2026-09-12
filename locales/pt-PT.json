@@ -1,0 +1,15 @@
+{
+	"title": "Modelos de IA de destaque classificados por número de geração",
+	"subtitle": "{models} modelos públicos de {providers} fornecedores, ordenados pelos números de versão nos seus nomes",
+	"yAxis": "Número de geração",
+	"xAxis": "Modelo",
+	"note": "Nota: os números de versão são convenções de nomenclatura e não medem diretamente a qualidade do modelo.",
+	"loading": "A carregar os dados mais recentes dos modelos…",
+	"error": "Falha ao carregar os dados: {message}",
+	"retry": "Tentar novamente",
+	"updated": "Atualizado {time}",
+	"source": "Fonte de dados: models.dev",
+	"producedBy": "Apresentado com orgulho pelo laboratório fount agent",
+	"github": "GitHub",
+	"blog": "blog do fount"
+}

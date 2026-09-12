@@ -1,0 +1,12 @@
+{
+	"fmt": {
+		"useTabs": true,
+		"semiColons": false,
+		"singleQuote": true,
+		"lineWidth": 120
+	},
+	"tasks": {
+		"test": "deno test --allow-read",
+		"serve": "deno run -A jsr:@std/http/file-server -p 8080"
+	}
+}

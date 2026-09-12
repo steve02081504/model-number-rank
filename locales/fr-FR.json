@@ -1,0 +1,15 @@
+{
+	"title": "Modèles d’IA phares classés par numéro de génération",
+	"subtitle": "{models} modèles publics de {providers} fournisseurs, classés par les numéros de version de leurs noms",
+	"yAxis": "Numéro de génération",
+	"xAxis": "Modèle",
+	"note": "Remarque : les numéros de version sont des conventions de nommage et ne mesurent pas directement la qualité du modèle.",
+	"loading": "Chargement des dernières données de modèles…",
+	"error": "Échec du chargement des données : {message}",
+	"retry": "Réessayer",
+	"updated": "Mis à jour {time}",
+	"source": "Source des données : models.dev",
+	"producedBy": "Présenté avec fierté par le laboratoire fount agent",
+	"github": "GitHub",
+	"blog": "blog fount"
+}

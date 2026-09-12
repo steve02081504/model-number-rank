@@ -1,0 +1,15 @@
+{
+	"title": "諸主流智機型，以代次之數為序",
+	"subtitle": "取 {providers} 家之公開模型 {models} 款，依其名中版次之數為序",
+	"yAxis": "代次",
+	"xAxis": "模型",
+	"note": "注：版次之數乃命名之習，非直量模型之優劣也。",
+	"loading": "方載最新模型之籍…",
+	"error": "載籍不成：{message}",
+	"retry": "再試",
+	"updated": "更新於 {time}",
+	"source": "數據之源：models.dev",
+	"producedBy": "fount agent 館 榮譽製造",
+	"github": "GitHub",
+	"blog": "fount 之記"
+}

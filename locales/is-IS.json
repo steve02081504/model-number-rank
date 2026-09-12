@@ -1,0 +1,15 @@
+{
+	"title": "Valin helstu gervigreindarlíkön raðað eftir kynslóðanúmeri",
+	"subtitle": "{models} opinber líkön frá {providers} veitendum, raðað eftir útgáfunúmerum í heitum þeirra",
+	"yAxis": "Kynslóðanúmer",
+	"xAxis": "Líkan",
+	"note": "Athugið: útgáfunúmer eru nafnavenjur og mæla ekki gæði líkansins beint.",
+	"loading": "Hleð nýjustu líkanagögnum…",
+	"error": "Tókst ekki að hlaða gögnum: {message}",
+	"retry": "Reyna aftur",
+	"updated": "Uppfært {time}",
+	"source": "Gagnaveita: models.dev",
+	"producedBy": "Stolt kynnt af fount agent rannsóknarstofunni",
+	"github": "GitHub",
+	"blog": "fount blogg"
+}

@@ -1,0 +1,15 @@
+{
+	"title": "主流 AI 模型版本號排名",
+	"subtitle": "來自 {providers} 家廠商的 {models} 個公開模型，依名稱中的版本號排序",
+	"yAxis": "版本號",
+	"xAxis": "模型",
+	"note": "註：版本號僅為命名慣例，並不直接代表模型品質。",
+	"loading": "正在載入最新模型資料…",
+	"error": "資料載入失敗：{message}",
+	"retry": "重試",
+	"updated": "更新於 {time}",
+	"source": "資料來源：models.dev",
+	"producedBy": "由 fount agent 實驗室 榮譽出品",
+	"github": "GitHub",
+	"blog": "fount 部落格"
+}

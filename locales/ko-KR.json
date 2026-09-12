@@ -1,0 +1,15 @@
+{
+	"title": "세대 번호로 순위를 매긴 주요 AI 모델",
+	"subtitle": "{providers}개 제공업체의 공개 모델 {models}개를 이름의 버전 번호 순으로 정렬",
+	"yAxis": "세대 번호",
+	"xAxis": "모델",
+	"note": "참고: 버전 번호는 명명 관례이며 모델 품질을 직접 나타내지 않습니다.",
+	"loading": "최신 모델 데이터를 불러오는 중…",
+	"error": "데이터를 불러오지 못했습니다: {message}",
+	"retry": "다시 시도",
+	"updated": "업데이트 {time}",
+	"source": "데이터 출처: models.dev",
+	"producedBy": "fount agent 랩 명예 제작",
+	"github": "GitHub",
+	"blog": "fount 블로그"
+}

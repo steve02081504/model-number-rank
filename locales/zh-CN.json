@@ -1,0 +1,15 @@
+{
+	"title": "主流 AI 模型版本号排名",
+	"subtitle": "来自 {providers} 家厂商的 {models} 个公开模型，按名称中的版本号排序",
+	"yAxis": "版本号",
+	"xAxis": "模型",
+	"note": "注：版本号仅为命名习惯，并不直接代表模型质量。",
+	"loading": "正在加载最新模型数据…",
+	"error": "数据加载失败：{message}",
+	"retry": "重试",
+	"updated": "更新于 {time}",
+	"source": "数据来源：models.dev",
+	"producedBy": "由 fount agent 实验室 荣誉出品",
+	"github": "GitHub",
+	"blog": "fount 博客"
+}

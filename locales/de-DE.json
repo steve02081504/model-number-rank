@@ -1,0 +1,15 @@
+{
+	"title": "Ausgewählte führende KI-Modelle nach Generationsnummer",
+	"subtitle": "{models} öffentliche Modelle von {providers} Anbietern, geordnet nach den Zahlen ihrer Versionsbezeichnungen",
+	"yAxis": "Generationsnummer",
+	"xAxis": "Modell",
+	"note": "Hinweis: Versionsnummern sind Namenskonventionen und kein direktes Maß für Modellqualität.",
+	"loading": "Neueste Modelldaten werden geladen…",
+	"error": "Daten konnten nicht geladen werden: {message}",
+	"retry": "Erneut versuchen",
+	"updated": "Aktualisiert {time}",
+	"source": "Datenquelle: models.dev",
+	"producedBy": "Mit Stolz präsentiert vom fount agent Lab",
+	"github": "GitHub",
+	"blog": "fount-Blog"
+}

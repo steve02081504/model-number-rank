@@ -1,0 +1,15 @@
+{
+	"title": "Các mô hình AI chủ đạo được xếp hạng theo số thế hệ",
+	"subtitle": "{models} mô hình công khai từ {providers} nhà cung cấp, xếp theo số phiên bản trong tên",
+	"yAxis": "Số thế hệ",
+	"xAxis": "Mô hình",
+	"note": "Lưu ý: số phiên bản là quy ước đặt tên, không phải thước đo trực tiếp chất lượng mô hình.",
+	"loading": "Đang tải dữ liệu mô hình mới nhất…",
+	"error": "Không tải được dữ liệu: {message}",
+	"retry": "Thử lại",
+	"updated": "Cập nhật {time}",
+	"source": "Nguồn dữ liệu: models.dev",
+	"producedBy": "Tự hào giới thiệu bởi phòng thí nghiệm fount agent",
+	"github": "GitHub",
+	"blog": "blog fount"
+}

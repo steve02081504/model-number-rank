@@ -1,0 +1,15 @@
+{
+	"title": "Geselecteerde toonaangevende AI-modellen gerangschikt op generatienummer",
+	"subtitle": "{models} openbare modellen van {providers} aanbieders, gesorteerd op de versienummers in hun namen",
+	"yAxis": "Generatienummer",
+	"xAxis": "Model",
+	"note": "Let op: versienummers zijn naamgevingsconventies en vormen geen directe maatstaf voor modelkwaliteit.",
+	"loading": "Nieuwste modelgegevens laden…",
+	"error": "Gegevens laden mislukt: {message}",
+	"retry": "Opnieuw",
+	"updated": "Bijgewerkt {time}",
+	"source": "Databron: models.dev",
+	"producedBy": "Met trots gepresenteerd door het fount agent-lab",
+	"github": "GitHub",
+	"blog": "fount-blog"
+}

@@ -1,0 +1,15 @@
+{
+	"title": "Selected Mainstream AI Models Ranked by Generation Number",
+	"subtitle": "{models} public models across {providers} providers, ordered by the numeric version identifiers used in their names",
+	"yAxis": "Generation Number",
+	"xAxis": "Model",
+	"note": "Note: Version numbers are naming conventions and are not direct measures of model quality.",
+	"loading": "Loading the latest model data…",
+	"error": "Failed to load data: {message}",
+	"retry": "Retry",
+	"updated": "Updated {time}",
+	"source": "Data source: models.dev",
+	"producedBy": "Proudly presented by the fount agent lab",
+	"github": "GitHub",
+	"blog": "fount blog"
+}
