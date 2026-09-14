@@ -126,7 +126,7 @@ export function catalogStats(apiData) {
  * @param {Record<string, object>} apiData - models.dev API JSON。
  * @param {object} [options] - 选项。
  * @param {number} [options.perFamily] - 每个厂商保留的版本数。
- * @returns {object[]} 排名条目（含版本号、名称、厂商、颜色、图标）。
+ * @returns {object[]} 排名条目（含版本号、名称、厂商、颜色）。
  */
 export function buildRanking(apiData, { perFamily = VERSIONS_PER_FAMILY } = {}) {
 	const items = []
@@ -151,7 +151,6 @@ export function buildRanking(apiData, { perFamily = VERSIONS_PER_FAMILY } = {}) 
 					providerId: family.provider,
 					providerLabel: family.label,
 					color: family.color,
-					logo: logoUrl(family.provider),
 				})
 			}
 		}

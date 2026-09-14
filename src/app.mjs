@@ -1,4 +1,5 @@
-import { buildRanking, catalogStats, FAMILIES, logoUrl } from './rank.mjs'
+import { buildRanking, catalogStats, FAMILIES } from './rank.mjs'
+import { cachedLogoSvg, createLogoSvgElement, loadLogoSvg, svgDataUri } from './logos.mjs'
 import {
 	direction,
 	FALLBACK,
@@ -102,11 +103,12 @@ function buildOption(ranking, dark) {
 	for (const item of ranking) {
 		if (seen.has(item.providerId)) continue
 		seen.add(item.providerId)
+		const image = svgDataUri(cachedLogoSvg(item.providerId), colors.text)
 		rich[`logo_${item.providerId}`] = {
 			width: 20,
 			height: 20,
 			align: 'center',
-			backgroundColor: { image: item.logo, repeat: false },
+			...(image ? { backgroundColor: { image, repeat: false } } : {}),
 		}
 	}
 	return {
@@ -123,11 +125,13 @@ function buildOption(ranking, dark) {
 			formatter: (params) => {
 				const item = ranking[params[0]?.dataIndex]
 				if (!item) return ''
-				const logo =
-					`<img src="${item.logo}" style="width:14px;height:14px;vertical-align:-2px" onerror="this.remove()">`
+				const image = svgDataUri(cachedLogoSvg(item.providerId), colors.text)
+				const logo = image
+					? `<img src="${image}" style="width:14px;height:14px;vertical-align:-2px" alt="">`
+					: ''
 				return [
 					`<div style="font-weight:600">${escapeHtml(item.label)}</div>`,
-					`<div style="opacity:.75">${logo} ${escapeHtml(item.providerLabel)}</div>`,
+					`<div style="opacity:.75">${logo ? `${logo} ` : ''}${escapeHtml(item.providerLabel)}</div>`,
 					`<div>${escapeHtml(t('yAxis'))}: <b>${formatVersion(item.version)}</b></div>`,
 					`<div style="opacity:.6;font-size:11px">${escapeHtml(item.modelId)}</div>`,
 				].join('')
@@ -225,18 +229,31 @@ function renderLegend() {
 		const swatch = document.createElement('span')
 		swatch.className = 'inline-block h-3 w-3 rounded-sm'
 		swatch.style.background = family.color
-		const logo = document.createElement('img')
-		logo.src = logoUrl(family.provider)
-		logo.alt = ''
-		logo.className = 'h-4 w-4'
-		logo.loading = 'lazy'
-		logo.addEventListener('error', () => logo.remove())
+		const logo = document.createElement('span')
+		logo.className = 'inline-flex h-4 w-4 items-center justify-center'
+		loadLogoSvg(family.provider)
+			.then((svg) => {
+				const element = createLogoSvgElement(svg)
+				if (element) logo.replaceChildren(element)
+			})
+			.catch(() => {/* 图标加载失败时保留色块 */})
 		const name = document.createElement('span')
 		name.textContent = family.label
 		chip.append(swatch, logo, name)
 		return chip
 	})
 	elements.legend.replaceChildren(...chips)
+}
+
+/**
+ * 预取全部厂商图标；就绪后重绘图表（ECharts 背景图需要同步拿到 SVG 文本）。
+ * @returns {void}
+ */
+function preloadLogos() {
+	Promise.allSettled(FAMILIES.map((family) => loadLogoSvg(family.provider)))
+		.then(() => {
+			if (items.length) renderChart()
+		})
 }
 
 /**
@@ -402,6 +419,7 @@ async function refresh({ force = false } = {}) {
 function init() {
 	buildLanguageOptions()
 	renderLegend()
+	preloadLogos()
 	initChart()
 
 	let stored

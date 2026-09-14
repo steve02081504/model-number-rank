@@ -24,6 +24,12 @@
 			document.documentElement.dataset.theme = dark ? 'dark' : 'light'
 		})()
 	</script>
+	<style>
+		/* 内联的厂商 SVG 图标用 fill="currentColor"，继承文字色即可随主题反色。 */
+		.text-icon {
+			color: inherit;
+		}
+	</style>
 	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/daisyui/daisyui.css" rel="stylesheet" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/daisyui/themes.css" rel="stylesheet" crossorigin="anonymous">

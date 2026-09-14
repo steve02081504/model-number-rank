@@ -8,6 +8,8 @@
 - 模型 / 厂商目录：`https://models.dev/api.json`，与 fount 的 proxy 视图同款
   （`fount/src/public/parts/serviceGenerators/AI/proxy/display.mjs`），CORS `*`，浏览器端直接 `fetch`。
 - 厂商图标：`https://models.dev/logos/<providerId>.svg`（接口无图标字段，由厂商 id 推导；`src/rank.mjs` `logoUrl`）。
+  这些 SVG 用 `fill="currentColor"`，作为 `<img>` 引用会解析成黑色、在深色主题下不可见；由 `src/logos.mjs` 内联为
+  `<svg class="text-icon">`（继承文字色），ECharts 场景则换成主题色后转 data URI。
 
 ## 前端依赖（全部 CDN URL，勿复制进仓库）
 
@@ -26,6 +28,7 @@
 
 - `index.html`：daisyUI/Tailwind 骨架 + CDN 引用，几乎没有自定义 CSS。
 - `src/rank.mjs`：纯计算（版本号解析、排名、统计、图标 URL），无 DOM，**改排名逻辑只改这里**。
+- `src/logos.mjs`：厂商图标取回 / 内联 / 换色（`tintSvg` / `svgDataUri` 为纯函数）。
 - `src/i18n.mjs`：语言元数据（代码/母语名/方向）+ 纯函数 + `loadMessages(code)`（按 URL 拉 `locales/<code>.json`）。
 - `locales/<code>.json`：fount `src/public/locales/list.csv` 全部 19 条（18 语言 + `emoji`
   伪语言）的文案；键集合需与之一致。
