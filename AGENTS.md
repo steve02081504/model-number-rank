@@ -1,6 +1,6 @@
 # AGENTS.md
 
-> 无构建、依赖与资源全部走 CDN 的静态站点：把主流 AI 模型的版本号实时排名渲染成柱状图。部署在 GitHub Pages（分支 `main`
+> 无构建、依赖与资源全部走 CDN 的静态站点：把主流 AI 模型的版本号实时排名渲染成柱状图。部署在 GitHub Pages（分支 `master`
 > 根目录）。
 
 ## 数据源
@@ -68,4 +68,4 @@ CDN 脚本需联网；`--lang=xx` 不影响 headless 的 `navigator.language`，
 
 ## 部署
 
-GitHub Pages = 分支 `main` 根目录（legacy build），无需 workflow；`gh api repos/<owner>/<repo>/pages` 查看状态。
+GitHub Pages = 分支 `master` 根目录（legacy build），无需 workflow；`gh api repos/<owner>/<repo>/pages` 查看状态。
